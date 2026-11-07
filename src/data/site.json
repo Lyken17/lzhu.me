@@ -506,6 +506,15 @@
     },
     {
       "type": "text",
+      "text": " and "
+    },
+    {
+      "type": "link",
+      "text": "Claude Code",
+      "href": "https://claude.com/claude-code"
+    },
+    {
+      "type": "text",
       "text": "."
     }
   ]
