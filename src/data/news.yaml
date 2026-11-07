@@ -2,6 +2,17 @@
 # The homepage shows the newest 8 entries. Full News shows every entry.
 # Use type: strong for achievements, or bold: true on a link token.
 
+- date: 2026-11
+  dateBasis: News date and description supplied by the user on 2026-11-07.
+  content:
+    - type: text
+      text: "Presented \"From Tokens to Productivity: Scalable Agentic Workflows for Engineering and Science\" at UCSD MLSys Seminar ("
+    - type: link
+      text: slides
+      href: assets/slides/261107-from-tokens-to-productivity-UCSD.pdf
+    - type: text
+      text: )
+
 - date: 2026-10
   dateBasis: News date and description supplied by the user on 2026-10-12.
   dateSource: https://x.com/LigengZhu/status/2108761209440989256

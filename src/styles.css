@@ -63,6 +63,8 @@ h3 { font-size: 1rem; line-height: 1.25; }
 .news-date { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .publication-list { display: grid; gap: 1.3rem; }
 .publication { min-width: 0; }
+.publication-divider { display: flex; align-items: center; gap: .75rem; margin-top: .4rem; color: var(--muted); font-size: .9rem; text-align: center; }
+.publication-divider::before, .publication-divider::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
 .publication h3 { overflow-wrap: anywhere; }
 .authors { font-size: 1rem; overflow-wrap: anywhere; }
 .authors strong { font-weight: 700; }

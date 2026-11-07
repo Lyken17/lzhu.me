@@ -71,7 +71,10 @@ onMounted(async () => {
         <a href="full-publications.html">Full Publications <span aria-hidden="true">→</span></a>
       </div>
       <div class="publication-list">
-        <PublicationItem v-for="publication in selectedPublications" :key="publication.id" :publication="publication" />
+        <template v-for="publication in selectedPublications" :key="publication.id">
+          <p v-if="publication.homepageDivider" class="publication-divider">{{ publication.homepageDivider }}</p>
+          <PublicationItem :publication="publication" />
+        </template>
       </div>
     </section>
 

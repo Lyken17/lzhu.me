@@ -1,5 +1,6 @@
 # All publications, in display order.
 # Use tag: [selected] to show a paper on the homepage; tag: [] keeps it on Full Publications only.
+# Optional homepageDivider: Label adds a divider before that selected paper on the homepage.
 
 - id: arxiv-2610-13897
   tag: [selected]
@@ -382,6 +383,7 @@
 
 - id: publication-12
   tag: [selected]
+  homepageDivider: Selected Pre-LLM Publications
   title: On-Device Training Under 256KB Memory
   href: https://proceedings.neurips.cc/paper_files/paper/2022/hash/90c56c77c6df45fc8e556a096b7a2b2e-Abstract-Conference.html
   authors:

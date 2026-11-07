@@ -33,6 +33,9 @@ export function parsePublicationsYaml(source) {
     stringList(publication.tag, 'tag')
     stringList(publication.authors, 'authors')
     if (!publication.authors.length) fail('authors must not be empty.')
+    if (publication.homepageDivider != null && (typeof publication.homepageDivider !== 'string' || !publication.homepageDivider.trim())) {
+      fail('homepageDivider must be a non-empty string.')
+    }
     if (publication.year != null && !Number.isInteger(publication.year)) fail('year must be an integer.')
 
     return {

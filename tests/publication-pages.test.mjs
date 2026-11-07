@@ -17,6 +17,12 @@ test('static pages render YAML publications and select the homepage list by tag'
   ])
   assert.deepEqual(publicationIds(home), publications.filter(publication => publication.tag.includes('selected')).map(publication => publication.id))
   assert.deepEqual(publicationIds(full), publications.map(publication => publication.id))
+  for (const publication of publications.filter(item => item.homepageDivider && item.tag.includes('selected'))) {
+    const divider = home.indexOf(`<p class="publication-divider">${publication.homepageDivider}</p>`)
+    assert.ok(divider >= 0, `Missing divider before ${publication.id}`)
+    assert.ok(home.indexOf(`id="${publication.id}"`, divider) > divider, `Divider must precede ${publication.id}`)
+    assert.ok(!full.includes(publication.homepageDivider), 'Homepage divider must not appear on Full Publications')
+  }
   assert.match(home, /data-page="home"/)
   assert.match(home, /href="full-publications\.html"/)
   assert.match(full, /data-page="full-publications"/)

@@ -10,7 +10,13 @@ function newsEntries(html) {
   assert.ok(list, 'Missing news list')
   return [...list[1].matchAll(/<li>([\s\S]*?)<\/li>/g)].map(([, entry]) => ({
     date: entry.match(/<time\b[^>]*datetime="([^"]+)"/)[1],
-    text: entry.replace(/<[^>]*>/g, ''),
+    text: entry
+      .replace(/<[^>]*>/g, '')
+      .replaceAll('&quot;', '"')
+      .replaceAll('&#39;', "'")
+      .replaceAll('&lt;', '<')
+      .replaceAll('&gt;', '>')
+      .replaceAll('&amp;', '&'),
   }))
 }
 
